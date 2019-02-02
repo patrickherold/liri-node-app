@@ -10,7 +10,7 @@ Uses axios to get results from the following API:
 ..* - rest.bandsintown.com
 ..* - omdbapi.com
 
-## require('./key')
+## require('./key' && dotenv)
 Maintains secret keys in seperate file not included in git repo.
 
 ## require('moment');

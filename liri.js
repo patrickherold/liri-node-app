@@ -76,7 +76,6 @@ function WriteLog(action, subject) {
     });
 }
 
-
 // Prompt the user to provide which command they want.
 inquirer.prompt([
     {
@@ -85,10 +84,10 @@ inquirer.prompt([
     message: "Which would you like?",
     choices: ["Find a concert", "Spotify a song", "Find a movie", "Do what it says"]
     }
-  
-  // After the prompt, store the user's response in a variable called location.
-  ]).then(function(prompt) {
-  
+
+// After the prompt, store the user's response in a variable called location.
+]).then(function(prompt) {
+
         // * `movie-this`
         if (prompt.whatCommand === "Find a movie") {
             
@@ -110,8 +109,8 @@ inquirer.prompt([
                 name: "whatArtist",
                 message: "What band or artist can I lookup for you?"
                 }
-              // After the prompt, store the user's response in a variable called location.
-              ]).then(function(artist) {
+            // After the prompt, store the user's response in a variable called location.
+            ]).then(function(artist) {
                 FindConcert(artist.whatArtist);
                 WriteLog("Find a concert", artist.whatArtist)
             });
@@ -124,8 +123,8 @@ inquirer.prompt([
                 name: "whatSong",
                 message: "What song can I lookup for you?"
                 }
-              // After the prompt, store the user's response in a variable called location.
-              ]).then(function(song) {
+            // After the prompt, store the user's response in a variable called location.
+            ]).then(function(song) {
                 SpotifyThisSong(song.whatSong);
                 WriteLog("Spotify a song", song.whatSong)
             });
@@ -134,7 +133,7 @@ inquirer.prompt([
             fs.readFile("./random.txt", "utf8", function(error, data) {
                 // If the code experiences any errors it will log the error to the console.
                 if (error) {
-                  return console.log(error);
+                return console.log(error);
                 }
                 // Then split it by commas (to make it more readable)
                 var dataArr = data.split(",");
@@ -159,5 +158,4 @@ inquirer.prompt([
         else {
             console.log("Nothing to do.")
         };
-    });
-  
+});
