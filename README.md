@@ -19,3 +19,19 @@ Light date formatting
 
 ## require('fs');
 Write log file. Read comman files.
+
+===========================================================================
+
+## Screen Shots:
+
+### Find a concert:
+![Find a concert](img/findConcert.png "Find a concert")
+
+### Look up a song:
+![Find a song](img/findSong.png "Look up a song")
+
+### Look up a movie:
+![Find a movie](img/findMovie.png "Look up a movie")
+
+### Execute the command in a file:
+![Find a movie](img/doWhat.png "Do what it says")

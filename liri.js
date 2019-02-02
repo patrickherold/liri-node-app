@@ -138,23 +138,20 @@ inquirer.prompt([
                 // Then split it by commas (to make it more readable)
                 var dataArr = data.split(",");
                 // We will then re-display the content as an array for later use.
-                for (var i = 0; i < dataArr.length; i = i + 2) {
-                    console.log(dataArr[i]);
-                    if (dataArr[i] === "Spotify a song") {
-                        SpotifyThisSong(dataArr[i++]);
-                        WriteLog("Spotify a song", dataArr[i++])
-                    }
-                    else if (dataArr[i] === "Find a concert") {
-                        FindConcert(dataArr[i++]);
-                        WriteLog("Find a concert", dataArr[i++])
-                    }
-                    else if (dataArr[i] === "Find a movie") {
-                        MovieThis(dataArr[i++]);
-                        WriteLog("Find a movie", dataArr[i++])
-                    }    
+                if (dataArr[0] === "Spotify a song") {
+                    SpotifyThisSong(dataArr[1]);
+                    WriteLog("Spotify a song", dataArr[1])
                 }
-            });
-        }
+                else if (dataArr[0] === "Find a concert") {
+                    FindConcert(dataArr[1]);
+                    WriteLog("Find a concert", dataArr[1])
+                }
+                else if (dataArr[0] === "Find a movie") {
+                    MovieThis(dataArr[1]);
+                    WriteLog("Find a movie", dataArr[1])
+                }    
+            }
+        )}
         else {
             console.log("Nothing to do.")
         };
